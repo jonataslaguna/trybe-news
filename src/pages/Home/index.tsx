@@ -1,23 +1,15 @@
-import { useEffect, useState } from "react";
-import { getNews } from "../../utils/API/api";
-import MostRecentNews from "../../components/MostRecentNews";
-import { NewsData } from "../../types";
+import { useContext} from "react";
+import MostRecentNew from "../../components/MostRecentNew";
+import Nav from "../../components/Nav";
+import MostRecents from "../../components/MostRecent";
+import NewsContext from "../../context/NewsContext";
 
 function Home() {
-    const [news, setNews ] = useState<NewsData[]>([]);
-
-    useEffect(() => {
-        const fetchNews = async () => {
-        const newsData = await getNews();
-        setNews(newsData.items);
-       };
-      fetchNews();
-    },[]);
-  console.log(news[0]?.data_publicacao);
+    const { news } = useContext(NewsContext);
     return (
     <div>
        {news && 
-          <MostRecentNews 
+          <MostRecentNew 
             title={news[0]?.titulo} 
             description={news[0]?.introducao} 
             url={news[0]?.link} 
@@ -25,6 +17,8 @@ function Home() {
             date={news[0]?.data_publicacao}
           />
         } 
+        <Nav />
+        <MostRecents />
     </div>
     )
 }

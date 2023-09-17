@@ -1,6 +1,4 @@
-import { MostRecentNewsProps } from "../../types";
-
-function MostRecentNews ({ title, description, image, url, date }: MostRecentNewsProps) {
+function Card({ title, description, url, date}: {title: string, description: string, url: string, date: string}){
 
   const dateParts = date?.split(/[\s/:-]+/);
   const newsDate = dateParts ? new Date(
@@ -32,21 +30,16 @@ function MostRecentNews ({ title, description, image, url, date }: MostRecentNew
   };
 
   const timeAgo = formatTimeAgo(timeDifference);
-
-    return (
-      <div className="card">
-      <img src={image} alt={title} /> 
+  return (
+    <div className="card">
+      <h3>{title}</h3>
+      <p>{description}</p>
         <div>
-          <p>Noticia mais recente</p>
-            <h1>{title}</h1>
-            <p>{description}</p>
-          <div>
-            <p>{ timeAgo }</p>
-            <a href={url} target="_blank">Leia a notícia aqui</a>
-          </div>
+          <p>{ timeAgo }</p>
+          <a href={url} target="_blank">Leia a notícia aqui</a>
         </div>
-      </div>
-    )
+    </div>
+  )
 }
 
-export default MostRecentNews; 
+export default Card;
