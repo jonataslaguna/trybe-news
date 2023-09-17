@@ -1,9 +1,11 @@
+import Header from './components/Header'
+
 import './App.css'
 
 function App() {
   return (
-    <div className="App">,
-      <h1>Trybe News</h1>
+    <div className="App">
+      <Header />
     </div>
   )
 }
