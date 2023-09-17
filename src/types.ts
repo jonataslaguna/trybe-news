@@ -1,8 +1,9 @@
-export type FirstNewsCardProps = {
+export type MostRecentNewsProps = {
     title: string;
     description: string;
     image: string;
     url: string;
+    date: string;
 };
 
 export type NewsData = {

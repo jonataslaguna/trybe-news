@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getNews } from "../../utils/API/api";
-import FirstNews from "../../components/FirstNews";
+import MostRecentNews from "../../components/MostRecentNews";
 import { NewsData } from "../../types";
 
 function Home() {
@@ -13,15 +13,16 @@ function Home() {
        };
       fetchNews();
     },[]);
-  
+  console.log(news[0]?.data_publicacao);
     return (
     <div>
        {news && 
-          <FirstNews 
+          <MostRecentNews 
             title={news[0]?.titulo} 
             description={news[0]?.introducao} 
             url={news[0]?.link} 
-            image={news[0]?.imagens} 
+            image={news[0]?.imagens}
+            date={news[0]?.data_publicacao}
           />
         } 
     </div>
