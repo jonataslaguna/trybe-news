@@ -13,9 +13,11 @@ function MostRecents() {
               description={item.introducao}
               url={item.link}
               date={item.data_publicacao}
+              idCurr={item.id}
             />
              ))
             }
+            <button>Mais Noticias</button>
         </div>
     )
 }

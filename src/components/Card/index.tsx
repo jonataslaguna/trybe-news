@@ -1,4 +1,37 @@
-function Card({ title, description, url, date}: {title: string, description: string, url: string, date: string}){
+import { useEffect, useState } from "react";
+import { NewsData } from "../../types";
+
+
+import styles from './card.module.css';
+
+function Card({ title, description, url, date, idCurr }: {title: string, description: string, url: string, date: string, idCurr: number}){
+  const[ isLocalFavorite, setIsLocalFavorite ] = useState<boolean>(false);
+
+
+  useEffect(() => {
+    const isCardInFavorites = () => {
+      const existingFavorites = localStorage.getItem('favorites');
+      const favorites = existingFavorites ? JSON.parse(existingFavorites) : [];
+      return favorites.some((favorite: NewsData) => favorite.idCurr === idCurr);
+    };
+    setIsLocalFavorite(isCardInFavorites());
+  }, [idCurr]);
+
+  const handleClickFavorite = () => {
+    setIsLocalFavorite(!isLocalFavorite);
+    const existingFavorites = localStorage.getItem('favorites');
+    const favorites = existingFavorites ? JSON.parse(existingFavorites) : [];
+    
+    const newFavorite = { title, description, url, date, idCurr };
+
+    const upDateFavorites = favorites.filter((favorite: NewsData) => favorite.idCurr !== idCurr);
+
+    if(!isLocalFavorite) {
+      upDateFavorites.push(newFavorite);
+    }
+
+    localStorage.setItem('favorites', JSON.stringify(upDateFavorites));
+  };
 
   const dateParts = date?.split(/[\s/:-]+/);
   const newsDate = dateParts ? new Date(
@@ -37,6 +70,12 @@ function Card({ title, description, url, date}: {title: string, description: str
         <div>
           <p>{ timeAgo }</p>
           <a href={url} target="_blank">Leia a notícia aqui</a>
+          <button 
+            className={ styles.favorite }
+            onClick={ handleClickFavorite }
+         >
+          <img src={isLocalFavorite ? '/images/favorite-true.png' : '/images/favorite_false.png'} alt="favotite" />
+        </button>
         </div>
     </div>
   )

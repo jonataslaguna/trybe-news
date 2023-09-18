@@ -10,6 +10,7 @@ type ProviderNewsProps = {
 
 function ProviderNews({ children }: ProviderNewsProps) {
   const [news, setNews ] = useState<NewsData[]>([]);
+
   useEffect(() => {
     const fetchNews = async () => {
     const newsData = await getNews();

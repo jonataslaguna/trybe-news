@@ -4,6 +4,7 @@ export type MostRecentNewsProps = {
     image: string;
     url: string;
     date: string;
+    idCurr: number;
 };
 
 export type NewsData = {
@@ -13,4 +14,5 @@ export type NewsData = {
     data_publicacao: string;
     imagens: string;
     link: string;
+    idCurr: number;
 };
