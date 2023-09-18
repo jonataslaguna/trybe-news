@@ -2,7 +2,7 @@ import Card from "../../components/Card";
 import NewsContext from "../../context/NewsContext";
 import { useContext } from "react";
 
-function MostRecents() {
+function News() {
     const { news } = useContext(NewsContext);
     return (
         <div>
@@ -22,4 +22,4 @@ function MostRecents() {
     )
 }
 
-export default MostRecents;
+export default News;

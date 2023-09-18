@@ -1,6 +1,6 @@
 import { NewsProps } from "../../types";
 
-function MostRecentNew ({ title, description, image, url, date }: NewsProps) {
+function LatestNews ({ title, description, image, url, date }: NewsProps) {
 
   const dateParts = date?.split(/[\s/:-]+/);
   const newsDate = dateParts ? new Date(
@@ -49,4 +49,4 @@ function MostRecentNew ({ title, description, image, url, date }: NewsProps) {
     )
 }
 
-export default MostRecentNew; 
+export default LatestNews; 
