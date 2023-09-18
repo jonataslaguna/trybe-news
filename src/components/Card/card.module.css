@@ -12,9 +12,16 @@
   background-color: #fff;
 }
 
+
+
 .card h3 {
   text-align: start;
+  font-size: 15px;
   margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 12px;
 }
 
 .description {
@@ -40,7 +47,7 @@
 }
 
 .favorite img {
-  margin-left: 290px;
+  margin-left: 277px;
   cursor: pointer;
   width: 15px;
   height: 15px;
