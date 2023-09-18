@@ -3,6 +3,8 @@ import LatestNews from "../../components/LatestNews";
 import News from "../News";
 import NewsContext from "../../context/NewsContext";
 import Favorites from "../Favorites";
+import Header from "../../components/Header";
+import styles from './home.module.css';
 
 function Home() {
     const { news } = useContext(NewsContext);
@@ -28,7 +30,8 @@ function Home() {
     }, [news]);
    
     return (
-    <div>
+    <div className={ styles.home }>
+      <Header />
        {news && 
           <LatestNews 
             title={news[0]?.titulo} 
@@ -39,7 +42,7 @@ function Home() {
             idCurr={news[0]?.id}
           />
         } 
-         <nav>
+         <nav className={ styles.nav }>
           <button onClick={() => handleClick('latestNews') }>Mais recentes</button>
           <button onClick={ () => handleClick('favorites') }>Favoritas</button>
         </nav>

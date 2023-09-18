@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NewsProps } from "../../types";
 import Card from "../../components/Card";
+import styles from './favorites.module.css';
 
 function Favorites () {
     const [favorites, setFavorites] = useState<NewsProps[]>([]);
@@ -14,7 +15,7 @@ function Favorites () {
         setFavorites(getFavorites());
     }, []);
     return (
-        <div>
+        <div className={ styles.favoritesContainer }>
          {favorites.map((favorite: NewsProps) => ( 
             <Card 
                 key={favorite.idCurr}

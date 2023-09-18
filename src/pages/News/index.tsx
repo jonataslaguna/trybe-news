@@ -1,12 +1,13 @@
 import Card from "../../components/Card";
 import NewsContext from "../../context/NewsContext";
 import { useContext } from "react";
+import styles from './news.module.css';
 
 function News() {
     const { news } = useContext(NewsContext);
     return (
-        <div>
-          {news?.slice(1, 9).map((item) => (
+        <div className={ styles.cardsContainer }>
+          {news?.slice(1, 11).map((item) => (
             <Card 
               key={item.id}
               title={item.titulo}
@@ -17,7 +18,6 @@ function News() {
             />
              ))
             }
-            <button>Mais Noticias</button>
         </div>
     )
 }

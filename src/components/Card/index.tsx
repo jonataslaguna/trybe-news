@@ -39,19 +39,19 @@ function Card({ title, description, url, date, idCurr }: NewsProps){
   const timeAgo = dateFormat(date);
   
   return (
-    <div className="card">
+    <div className={ styles.card }>
       <h3>{title}</h3>
-      <p>{description}</p>
-        <div>
+      <p className={ styles.description }>{description}</p>
+        <div className={ styles.cardInfos }>
           <p>{ timeAgo }</p>
           <a href={url} target="_blank">Leia a notícia aqui</a>
+        </div>
           <button 
             className={ styles.favorite }
             onClick={ handleClickFavorite }
          >
           <img src={isLocalFavorite ? '/images/favorite-true.png' : '/images/favorite_false.png'} alt="favotite" />
         </button>
-        </div>
     </div>
   )
 }

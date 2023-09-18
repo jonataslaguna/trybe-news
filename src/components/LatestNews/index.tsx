@@ -1,6 +1,7 @@
 import { NewsProps } from "../../types";
 import NewsContext from "../../context/NewsContext";
 import { useContext } from "react";
+import styles from './latestNews.module.css';
 
 function LatestNews ({ title, description, image, url, date }: NewsProps) {
   const { dateFormat } = useContext(NewsContext);
@@ -8,13 +9,13 @@ function LatestNews ({ title, description, image, url, date }: NewsProps) {
   const timeAgo = dateFormat(date)
 
     return (
-      <div className="card">
+      <div className={ styles.cardContainer }>
       <img src={`https://agenciadenoticias.ibge.gov.br/${image}`} alt={title} /> 
-        <div>
-          <p>Noticia mais recente</p>
+        <div className={ styles.cardInfos }>
+          <p className={ styles.lastestNew }>Noticia mais recente</p>
             <h2>{title}</h2>
             <p>{description}</p>
-          <div>
+          <div className={ styles.cardLinkAndDate }>
             <p>{ timeAgo }</p>
             <a href={url} target="_blank">Leia a notícia aqui</a>
           </div>

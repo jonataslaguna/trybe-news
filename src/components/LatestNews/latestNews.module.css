@@ -1,0 +1,33 @@
+.cardContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.cardContainer img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cardInfos {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 40px;
+}
+
+.cardLinkAndDate {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lastestNew {
+  color: red;
+  font-weight: 540;
+}
