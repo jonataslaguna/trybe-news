@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { NewsData } from "../../types";
+import { NewsProps } from "../../types";
 
 
 import styles from './card.module.css';
 
-function Card({ title, description, url, date, idCurr }: {title: string, description: string, url: string, date: string, idCurr: number}){
+function Card({ title, description, url, date, idCurr }: NewsProps){
   const[ isLocalFavorite, setIsLocalFavorite ] = useState<boolean>(false);
 
 
@@ -12,7 +12,7 @@ function Card({ title, description, url, date, idCurr }: {title: string, descrip
     const isCardInFavorites = () => {
       const existingFavorites = localStorage.getItem('favorites');
       const favorites = existingFavorites ? JSON.parse(existingFavorites) : [];
-      return favorites.some((favorite: NewsData) => favorite.idCurr === idCurr);
+      return favorites.some((favorite: NewsProps) => favorite.idCurr === idCurr);
     };
     setIsLocalFavorite(isCardInFavorites());
   }, [idCurr]);
@@ -24,7 +24,7 @@ function Card({ title, description, url, date, idCurr }: {title: string, descrip
     
     const newFavorite = { title, description, url, date, idCurr };
 
-    const upDateFavorites = favorites.filter((favorite: NewsData) => favorite.idCurr !== idCurr);
+    const upDateFavorites = favorites.filter((favorite: NewsProps) => favorite.idCurr !== idCurr);
 
     if(!isLocalFavorite) {
       upDateFavorites.push(newFavorite);

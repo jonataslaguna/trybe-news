@@ -1,11 +1,20 @@
-import { useContext} from "react";
+import { useContext, useState} from "react";
 import MostRecentNew from "../../components/MostRecentNew";
-import Nav from "../../components/Nav";
-import MostRecents from "../../components/MostRecent";
+import MostRecents from "../MostRecent";
 import NewsContext from "../../context/NewsContext";
+import Favorites from "../Favorites";
 
 function Home() {
     const { news } = useContext(NewsContext);
+    const [btn, setBtn] = useState<string>('mostRecent');
+
+    const handleClick = (page: string) => {
+      if(page === 'favorites') {
+        setBtn('favorites');
+      }else {
+        setBtn('mostRecent');
+      }
+    }
     return (
     <div>
        {news && 
@@ -18,8 +27,12 @@ function Home() {
             idCurr={news[0]?.id}
           />
         } 
-        <Nav />
-        <MostRecents />
+         <nav>
+          <button onClick={() => handleClick('mostRecent') }>Mais recentes</button>
+          <button onClick={ () => handleClick('favorites') }>Favoritas</button>
+        </nav>
+        {btn === 'mostRecent' ? <MostRecents /> : <Favorites />}
+       
     </div>
     )
 }
