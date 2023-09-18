@@ -7,10 +7,10 @@
 }
 
 .cardContainer img {
+  border-radius: 10px;
   width: 50%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
 }
 
 .cardInfos {
@@ -21,7 +21,6 @@
 }
 
 .cardLinkAndDate {
-
   display: flex;
   justify-content: space-between;
   align-items: center;

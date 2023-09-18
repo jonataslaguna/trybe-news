@@ -1,13 +1,20 @@
 import Card from "../../components/Card";
 import NewsContext from "../../context/NewsContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import styles from './news.module.css';
 
 function News() {
     const { news } = useContext(NewsContext);
+    const [numToShow, setNumToShow] = useState(13);
+
+    const toggleShowAll = () => {
+      setNumToShow((prev) => prev + 13);
+    };
+
     return (
+      <>
         <div className={ styles.cardsContainer }>
-          {news?.slice(1, 13).map((item) => (
+          {news?.slice(1, numToShow).map((item) => (
             <Card 
               key={item.id}
               title={item.titulo}
@@ -19,6 +26,12 @@ function News() {
              ))
             }
         </div>
+        {numToShow < news?.length && (
+            <button onClick={toggleShowAll} className={ styles.buttonMoreNews }>
+              Mais Notícias
+            </button>
+          )}
+      </>
     )
 }
 

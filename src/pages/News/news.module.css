@@ -7,3 +7,15 @@
   width: 90%;
   padding: 20px;
 }
+
+.buttonMoreNews {
+  color: #C31815;
+  cursor: pointer;
+  width: 220px;
+  height: 60px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1.6 px;
+  text-align: center;
+  margin-bottom: 20px;
+}
