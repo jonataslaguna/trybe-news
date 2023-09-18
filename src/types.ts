@@ -1,7 +1,9 @@
 export type NewsProps = {
     title: string;
     description: string;
-    image?: string;
+    image?: {
+        image_fulltext: string;
+    };
     url: string;
     date: string;
     idCurr: number;

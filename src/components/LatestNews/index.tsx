@@ -35,7 +35,7 @@ function LatestNews ({ title, description, image, url, date }: NewsProps) {
 
     return (
       <div className="card">
-      <img src={image} alt={title} /> 
+      <img src={`https://agenciadenoticias.ibge.gov.br/${image}`} alt={title} /> 
         <div>
           <p>Noticia mais recente</p>
             <h2>{title}</h2>

@@ -15,6 +15,7 @@ function Home() {
         setBtn('latestNews');
       }
     }
+   
     return (
     <div>
        {news && 
@@ -22,7 +23,7 @@ function Home() {
             title={news[0]?.titulo} 
             description={news[0]?.introducao} 
             url={news[0]?.link} 
-            image={news[0]?.imagens}
+            image={JSON.parse(news[0]?.imagens)?.image_fulltext || ""}
             date={news[0]?.data_publicacao}
             idCurr={news[0]?.id}
           />
