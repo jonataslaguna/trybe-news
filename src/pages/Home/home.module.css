@@ -28,3 +28,7 @@
 .nav button:hover {
   background-color: #f1f2f3;
 }
+
+.nav .active {
+  background-color: #cacccec7;
+}

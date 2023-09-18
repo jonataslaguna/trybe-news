@@ -11,7 +11,7 @@ type ProviderNewsProps = {
 function ProviderNews({ children }: ProviderNewsProps) {
   const [news, setNews ] = useState<NewsData[]>([]);
   const [favorites, setFavorites] = useState<NewsProps[]>([]);
-
+  console.log(news);
   const dateFormat = (date: string) => {
     const dateParts = date?.split(/[\s/:-]+/);
     const newsDate = dateParts ? new Date(

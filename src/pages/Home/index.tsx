@@ -43,8 +43,18 @@ function Home() {
           />
         } 
          <nav className={ styles.nav }>
-          <button onClick={() => handleClick('latestNews') }>Mais recentes</button>
-          <button onClick={ () => handleClick('favorites') }>Favoritas</button>
+          <button 
+            className={ btn === 'latestNews' ? styles.active : ''}
+            onClick={() => handleClick('latestNews') } 
+          >
+            Mais recentes
+          </button>
+        
+          <button 
+            className={ btn === 'favorites' ? styles.active : ''}
+            onClick={ () => handleClick('favorites') }
+          >  Favoritas
+          </button>
         </nav>
         {btn === 'latestNews' ? <News /> : <Favorites />}
        

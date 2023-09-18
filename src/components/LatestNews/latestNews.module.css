@@ -4,6 +4,7 @@
   justify-content: center;
   gap: 20px;
   padding: 30px;
+  width: 90%;
 }
 
 .cardContainer img {
@@ -27,7 +28,7 @@
 }
 
 .lastestNew {
-  color: red;
+  color: #C31815;
   font-weight: 540;
 }
 
@@ -35,6 +36,7 @@
   .cardContainer {
     flex-direction: column;
     gap: 20px;
+    width: 100%;
   }
 
   .cardContainer img {
