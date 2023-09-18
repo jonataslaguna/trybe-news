@@ -7,7 +7,7 @@ import styles from './card.module.css';
 
 function Card({ title, description, url, date, idCurr }: NewsProps){
   const[ isLocalFavorite, setIsLocalFavorite ] = useState<boolean>(false);
-  const { dateFormat } = useContext(NewsContext);
+  const { dateFormat, setFavorites } = useContext(NewsContext);
 
 
   useEffect(() => {
@@ -33,11 +33,14 @@ function Card({ title, description, url, date, idCurr }: NewsProps){
     }
 
     localStorage.setItem('favorites', JSON.stringify(upDateFavorites));
+    setFavorites(upDateFavorites);
+
   };
 
 
   const timeAgo = dateFormat(date);
-  
+
+ 
   return (
     <div className={ styles.card }>
       <h3>{title}</h3>

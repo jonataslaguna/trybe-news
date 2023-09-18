@@ -1,10 +1,12 @@
 import { createContext } from 'react';
-import { NewsData } from '../types';
+import { NewsData, NewsProps } from '../types';
 
 type NewsContextType = {
     news: NewsData[];
     setNews: (news: NewsData[]) => void;
     dateFormat: (date: string) => string;
+    favorites: NewsProps[] | undefined;
+    setFavorites: (news: NewsProps[]) => void;
 };
 
 const NewsContext = createContext({} as NewsContextType);

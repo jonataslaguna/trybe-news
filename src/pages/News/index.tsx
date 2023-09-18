@@ -7,7 +7,7 @@ function News() {
     const { news } = useContext(NewsContext);
     return (
         <div className={ styles.cardsContainer }>
-          {news?.slice(1, 11).map((item) => (
+          {news?.slice(1, 13).map((item) => (
             <Card 
               key={item.id}
               title={item.titulo}

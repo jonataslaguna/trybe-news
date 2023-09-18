@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NewsContext from "./NewsContext";
 import { getNews } from "../utils/API/api";
-import { NewsData } from "../types";
+import { NewsData, NewsProps } from "../types";
 
 type ProviderNewsProps = {
     children: React.ReactNode;
@@ -10,6 +10,7 @@ type ProviderNewsProps = {
 
 function ProviderNews({ children }: ProviderNewsProps) {
   const [news, setNews ] = useState<NewsData[]>([]);
+  const [favorites, setFavorites] = useState<NewsProps[]>([]);
 
   const dateFormat = (date: string) => {
     const dateParts = date?.split(/[\s/:-]+/);
@@ -58,6 +59,8 @@ function ProviderNews({ children }: ProviderNewsProps) {
     news, 
     setNews,
     dateFormat,
+    favorites,
+    setFavorites,
     }}>
       {children}
     </NewsContext.Provider>

@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { NewsProps } from "../../types";
 import Card from "../../components/Card";
+import NewsContext from "../../context/NewsContext";
 import styles from './favorites.module.css';
 
 function Favorites () {
-    const [favorites, setFavorites] = useState<NewsProps[]>([]);
+    const { favorites, setFavorites } = useContext(NewsContext);
 
     useEffect(() => {
         const getFavorites = () => {
@@ -13,10 +14,10 @@ function Favorites () {
             return favorites;
         }
         setFavorites(getFavorites());
-    }, []);
+    }, [setFavorites]);
     return (
         <div className={ styles.favoritesContainer }>
-         {favorites.map((favorite: NewsProps) => ( 
+         {favorites?.length !== 0  ? favorites?.map((favorite: NewsProps) => ( 
             <Card 
                 key={favorite.idCurr}
                 title={favorite.title} 
@@ -25,7 +26,9 @@ function Favorites () {
                 date={favorite.date} 
                 idCurr={favorite.idCurr} 
             />
-         ))}
+         ))
+         : <h2 className={ styles.messageFavorites }>Você ainda não adicionou nenhum favorito</h2>
+         }
         </div>
     )
 }
