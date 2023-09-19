@@ -1,13 +1,18 @@
 import { NewsProps } from "../../types";
 import NewsContext from "../../context/NewsContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from './latestNews.module.css';
 
 function LatestNews ({ title, description, image, url, date }: NewsProps) {
   const { dateFormat } = useContext(NewsContext);
+  const [ timeAgo, setTimeAgo ] = useState<string | undefined>('');
 
-  const timeAgo = dateFormat(date)
+  useEffect(() => {
+    const getTimeAgo = dateFormat(date);
+    setTimeAgo(getTimeAgo);
+  }, [date, dateFormat])
 
+ 
     return (
       <div className={ styles.cardContainer }>
       <img src={`https://agenciadenoticias.ibge.gov.br/${image}`} alt={title} /> 
