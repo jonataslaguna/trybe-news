@@ -13,8 +13,13 @@ function ProviderNews({ children }: ProviderNewsProps) {
   const [favorites, setFavorites] = useState<NewsProps[]>([]);
 
   const dateFormat = (date: string) => {
-    const dateParts = date.split(/[\s/:-]+/); 
-    const newsDate = new Date(
+    const dateParts = date?.split(/[\s/:-]+/); 
+
+   if (!dateParts) {
+      return;
+    }
+  
+    const newsDate =  new Date(
       Number(dateParts[2]), 
       Number(dateParts[1]) - 1, 
       Number(dateParts[0]), 
@@ -43,8 +48,6 @@ function ProviderNews({ children }: ProviderNewsProps) {
   
     return formatTimeAgo(timeDifference);
   };
-  
-  
   
   useEffect(() => {
     const fetchNews = async () => {
