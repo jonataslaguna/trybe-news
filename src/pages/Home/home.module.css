@@ -20,7 +20,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 17px;
   padding: 10px;
   border-radius: 5px;
 }
@@ -32,3 +32,16 @@
 .nav .active {
   background-color: #cacccec7;
 }
+
+@media screen and (max-width: 768px) {
+  .nav {
+    justify-content: center;
+  }
+  
+  .nav button {
+    font-size: 14px;
+    padding: 20px 10px;
+  }
+}
+
+  

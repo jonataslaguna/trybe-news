@@ -6,6 +6,7 @@ import Favorites from "../Favorites";
 import Header from "../../components/Header";
 import styles from './home.module.css';
 import Release from "../Release";
+import TypeNews from "../TypeNews";
 
 function Home() {
     const { news } = useContext(NewsContext);
@@ -22,6 +23,9 @@ function Home() {
                 break;
             case 'favorites':
                 setBtn('favorites');
+                break;
+            case 'typeNews':
+                setBtn('typeNews');
                 break;
             default:
                 setBtn('latestNews');
@@ -66,16 +70,27 @@ function Home() {
             Release
           </button>
 
-        
+          <button
+            className={btn === 'typeNews' ? styles.active : ''}
+            onClick={() => handleClick('typeNews')}
+          >
+            Notícias
+          </button>
+
           <button 
             className={ btn === 'favorites' ? styles.active : ''}
             onClick={ () => handleClick('favorites') }
           >  Favoritas
           </button>
         </nav>
-        {btn === 'latestNews' ? <News /> : btn === 'favorites' ? <Favorites /> : <Release />}
-
-       
+        
+        {btn === 'latestNews' 
+          ? <News /> 
+          : btn === 'favorites' 
+          ? <Favorites /> 
+          : btn === 'typeNews' 
+          ? <TypeNews /> 
+          : <Release />}       
     </div>
     )
 }
