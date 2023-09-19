@@ -5,6 +5,7 @@ import NewsContext from "../../context/NewsContext";
 import Favorites from "../Favorites";
 import Header from "../../components/Header";
 import styles from './home.module.css';
+import Release from "../Release";
 
 function Home() {
     const { news } = useContext(NewsContext);
@@ -12,11 +13,19 @@ function Home() {
     const [imageNews, setImageNews] = useState<string>('');
 
     const handleClick = (page: string) => {
-      if(page === 'favorites') {
-        setBtn('favorites');
-      }else {
-        setBtn('latestNews');
-      }
+        switch(page) {
+            case 'latestNews':
+                setBtn('latestNews');
+                break;
+            case 'release':
+                setBtn('release');
+                break;
+            case 'favorites':
+                setBtn('favorites');
+                break;
+            default:
+                setBtn('latestNews');
+        }
     }
 
     useEffect(() => {
@@ -49,6 +58,14 @@ function Home() {
           >
             Mais recentes
           </button>
+
+          <button
+            className={btn === 'release' ? styles.active : ''}
+            onClick={() => handleClick('release')}
+          >
+            Release
+          </button>
+
         
           <button 
             className={ btn === 'favorites' ? styles.active : ''}
@@ -56,7 +73,8 @@ function Home() {
           >  Favoritas
           </button>
         </nav>
-        {btn === 'latestNews' ? <News /> : <Favorites />}
+        {btn === 'latestNews' ? <News /> : btn === 'favorites' ? <Favorites /> : <Release />}
+
        
     </div>
     )

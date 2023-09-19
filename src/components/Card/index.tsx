@@ -8,7 +8,7 @@ import styles from './card.module.css';
 function Card({ title, description, url, date, idCurr }: NewsProps){
   const[ isLocalFavorite, setIsLocalFavorite ] = useState<boolean>(false);
   const { dateFormat, setFavorites } = useContext(NewsContext);
-
+   console.log();
 
   useEffect(() => {
     const isCardInFavorites = () => {

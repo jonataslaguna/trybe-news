@@ -9,6 +9,7 @@ export type NewsProps = {
 
 export type NewsData = {
     id: number;
+    tipo: string;
     titulo: string;
     introducao: string;
     data_publicacao: string;

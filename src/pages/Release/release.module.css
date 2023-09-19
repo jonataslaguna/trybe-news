@@ -1,0 +1,9 @@
+.releaseContainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 20px;
+}
