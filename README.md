@@ -6,17 +6,13 @@ Este é um projeto React que utiliza a API do IBGE para exibir as notícias mais
 
 Para utilizar a aplicação basta acessar esse link: https://trybe-news-eight.vercel.app/ ou seguir os passos descritos para rodar localmente
 
-  <li>Na página inicial você encontrará a notíca mais recente destacada, alguns botões para filtragem e o restante das noticias logo abaixo
-
-  <!-- ![Texto alternativo](public/gifs/mobile.gif) -->
+  <li>Na página inicial você encontrará a notíca mais recente destacada, alguns botões para filtragem: 'Mais Recentes', 'Realese', 'Notícias', 'Favoritas', e o restante das noticias logo abaixo
 
   <li>Caso queira ver mais notícias basta clicar no botão 'Mais Notícias', no final da página
 
-  <!-- ![Texto alternativo](public/gifs/mobile.gif) -->
+  <li>É possivel favoritar a notícia que quiser, e ela ficará salva na página de favoritos, mesmo após sair da aplicação
 
-  <li>É possivel favoritar a notícia que quiser, e ela ficará salva na página de favoritos
-
-   <!-- ![Texto alternativo](public/gifs/mobile.gif) -->
+  <li>Para ler a notÍcia completa basta clicar no botão 'Leia a notícia aqui' e você será direcionado para a página do IBGE com a noticia completa
 
 
 ## Pré-requisitos Para Rodar Localmente
