@@ -10,7 +10,7 @@ function Release() {
     const [releaseNews, setReleaseNews] = useState<NewsData[]>([]);
 
     useEffect(() => {
-        const newsFilter = news.filter((item) => item.tipo === 'Release');
+        const newsFilter = news?.filter((item) => item.tipo === 'Release');
         setReleaseNews(newsFilter);
     }, [news]);
 
