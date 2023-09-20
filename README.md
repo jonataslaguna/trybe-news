@@ -6,16 +6,18 @@ Este é um projeto React que utiliza a API do IBGE para exibir as notícias mais
 
 Para utilizar a aplicação basta acessar esse link: https://trybe-news-eight.vercel.app/ ou seguir os passos descritos para rodar localmente
 
-  <li>Na página inicial você encontrará a notíca mais recente destacada, alguns botões para filtragem: 'Mais Recentes', 'Realese', 'Notícias', 'Favoritas', e o restante das noticias logo abaixo
+  <li>Na página inicial você encontrará a notíca mais recente destacada, alguns botões para filtragem: 'Mais Recentes', 'Realese', 'Notícias', 'Favoritas', e o restante das notícias logo abaixo
 
   <li>Caso queira ver mais notícias basta clicar no botão 'Mais Notícias', no final da página
 
   <li>É possivel favoritar a notícia que quiser, e ela ficará salva na página de favoritos, mesmo após sair da aplicação
 
-  <li>Para ler a notÍcia completa basta clicar no botão 'Leia a notícia aqui' e você será direcionado para a página do IBGE com a noticia completa
+  <li>Para ler a notícia completa basta clicar no botão 'Leia a notícia aqui' e você será direcionado para a página do IBGE com a noticia completa
 
 
-## Pré-requisitos Para Rodar Localmente
+## Para Rodar Localmente
+
+#### Pré-requisitos:
 
 Antes de começar, certifique-se de ter instalado o Node.js e o npm (gerenciador de pacotes do Node.js) em sua máquina.
 
@@ -27,7 +29,7 @@ Antes de começar, certifique-se de ter instalado o Node.js e o npm (gerenciador
 
     npm install
 
-  <li> Após a instalação, você pode iniciar a localmente. Certifique-se de estar no diretório raiz do projeto e execute o seguinte comando:
+  <li> Após a instalação, você já pode iniciar localmente. Certifique-se de estar no diretório raiz do projeto e execute o seguinte comando:
 
     npm run dev
 
