@@ -8,11 +8,28 @@ Para utilizar a aplicação basta acessar esse link: https://trybe-news-eight.ve
 
   <li>Na página inicial você encontrará a notíca mais recente destacada, alguns botões para filtragem: 'Mais Recentes', 'Realese', 'Notícias', 'Favoritas', e o restante das notícias logo abaixo
 
+  
+  ![Página Home](/public/images/01.png)
+
+  #
+
   <li>Caso queira ver mais notícias basta clicar no botão 'Mais Notícias', no final da página
+
+  ![Página Home](/public/images/02.png)
+
+  #
 
   <li>É possivel favoritar a notícia que quiser, e ela ficará salva na página de favoritos, mesmo após sair da aplicação
 
+  ![Página Home](/public/images/03.png)
+
+  #
+
   <li>Para ler a notícia completa basta clicar no botão 'Leia a notícia aqui' e você será direcionado para a página do IBGE com a noticia completa
+
+  ![Página Home](/public/images/04.png)
+
+  #
 
 
 ## Para Rodar Localmente
