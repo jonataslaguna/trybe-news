@@ -45,8 +45,8 @@ function Card({ title, description, url, date, idCurr }: NewsProps){
     <div className={ styles.card }>
       <h3>{title}</h3>
       <p className={ styles.description }>{description}</p>
-        <div className={ styles.cardInfos }>
-          <p>{ timeAgo }</p>
+        <div className={ styles.cardInfos } >
+          <p className={ styles.time }>{ timeAgo }</p>
           <a href={url} target="_blank">Leia a notícia aqui</a>
         </div>
           <button 

@@ -5,16 +5,16 @@ import styles from './news.module.css';
 
 function News() {
     const { news } = useContext(NewsContext);
-    const [numToShow, setNumToShow] = useState(13);
+    const [numToShow, setNumToShow] = useState(12);
 
     const toggleShowAll = () => {
-      setNumToShow((prev) => prev + 13);
+      setNumToShow((prev) => prev + 12);
     };
 
     return (
       <>
         <div className={ styles.cardsContainer }>
-          {news?.slice(1, numToShow).map((item) => (
+          {news?.slice(0, numToShow).map((item) => (
             <Card 
               key={item.id}
               title={item.titulo}

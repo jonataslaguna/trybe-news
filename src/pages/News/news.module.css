@@ -9,13 +9,13 @@
 }
 
 .buttonMoreNews {
-  color: #C31815;
+  color: #026932ce;
   cursor: pointer;
-  width: 220px;
-  height: 60px;
-  font-weight: 500;
+  font-weight: bolder;
   font-size: 14px;
   letter-spacing: 1.6 px;
   text-align: center;
   margin-bottom: 20px;
+  height: 60px;
+  width: 220px;
 }

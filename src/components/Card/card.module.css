@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   width: 355px;
-  height: 355px;
+  height: 400px;
   padding: 20px;
   gap: 15px;
   border-radius: 10px;
@@ -15,27 +15,37 @@
 .card h3 {
   text-align: start;
   font-size: 15px;
-  padding: 10px 0 0 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .card p {
-  font-size: 12px;
+  font-size: 15px;
   text-align: justify;
 }
 
 .description {
+  align-items: self-start;
   text-align: start;
-  width: 300px;
-  height: 300px;
   font-size: 12px;
-  text-align: justify;
+  height: 200px;
 }
 
 .cardInfos {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 90px;
+  width: 300px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.cardInfos .time {
+  font-size: 11px;
+}
+
+.cardInfos button {
+  color: #fff;
 }
 
 .favorite {
@@ -52,3 +62,4 @@
   width: 15px;
   height: 15px;
 }
+
