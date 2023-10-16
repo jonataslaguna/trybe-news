@@ -33,16 +33,16 @@ function ProviderNews({ children }: ProviderNewsProps) {
   
     const formatTimeAgo = (timeAgo: number) => {
       if (timeAgo < 60) {
-        return `${timeAgo} segundos atrás`;
+        return `${timeAgo} segundo${timeAgo > 1 ? 's' : ''} atrás`;
       } else if (timeAgo < 3600) { 
         const minutes = Math.floor(timeAgo / 60);
-        return `${minutes} minutos atrás`;
+        return `${minutes} minuto${minutes > 1 ? 's' : ' '} atrás`;
       } else if (timeAgo < 86400) { 
         const hours = Math.floor(timeAgo / 3600);
-        return `${hours} horas atrás`;
+        return `${hours} hora${hours > 1 ? 's' : ''} atrás`;
       } else {
         const days = Math.floor(timeAgo / 86400);
-        return `${days} dias atrás`;
+        return `${days} dia${days > 1 ? 's' : ''}  atrás`;
       }
     };
   
