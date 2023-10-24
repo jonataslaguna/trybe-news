@@ -4,7 +4,7 @@ Este é um projeto React que utiliza a API do IBGE para exibir as notícias mais
 
 ## Como Usar
 
-Para utilizar a aplicação basta acessar esse link: https://trybe-news-eight.vercel.app/ ou seguir os passos descritos para rodar localmente
+Para utilizar a aplicação basta acessar esse <a href="https://trybe-news-eight.vercel.app">link</a> ou seguir os passos descritos para a [instalação](#instalação) localmente
 
   <li>Na página inicial você encontrará a notíca mais recente destacada, alguns botões para filtragem: 'Mais Recentes', 'Realese', 'Notícias', 'Favoritas', e o restante das notícias logo abaixo
 
@@ -54,22 +54,13 @@ Isso iniciará o servidor de desenvolvimento e abrirá automaticamente o aplicat
 
 ## Contribuição
 ### Se você deseja contribuir para este projeto, siga estas etapas:
-<ol>
-    
-  <li>Crie um fork deste repositório.
 
-  <li>Crie uma nova branch com um nome descritivo: 
+1. Faça um fork do projeto
+2. Crie uma nova branch (`git checkout -b feature/sua-feature`)
+3. Faça commit das alterações (`git commit -am 'Adicione sua feature'`)
+4. Faça push para a branch (`git push origin feature/sua-feature`)
+5. Abra um Pull Request
 
-    git checkout -b minha-contribuicao
+## Contato
 
-  <li>Faça suas alterações e commit: 
-
-    git commit -m "Adicionando minha contribuição"
-
-  <li>Envie seu branch para o repositório: 
-
-    git push origin minha-contribuicao
-
-  <li>Abra um pull request neste repositório e aguarde o feedback.
-
-</ol>
+Se você deseja entrar em contato comigo, sinta-se à vontade para enviar um e-mail para [jonataslaguna.js@gmail.com](mailto:jonataslaguna.js@gmail.com).
