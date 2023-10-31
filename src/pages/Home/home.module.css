@@ -24,8 +24,10 @@
   background-color: transparent;
   cursor: pointer;
   font-size: 17px;
+  font-weight: 520;
   text-align: center;
   margin-right: 15px;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav button:hover {
@@ -41,11 +43,18 @@
   .nav {
     justify-content: center;
     padding: 15px 0;
+    gap: 7px;
+    width: 97%;
   }
   
   .nav button {
     font-size: 14.5px;
   }
+
+
+.nav .active {
+  padding-bottom: 5px;
+}
 }
 
   
